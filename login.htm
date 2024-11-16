@@ -1,0 +1,63 @@
+<!Doctype HTML>
+<html lang= "en">
+<head>
+<meta charset= "utf-8">
+<meta name= "viewport"
+content="width=device-width, initial-scale=1">
+<style>
+.wrapper {border: 2px solid black; border-radius: 5px; padding: 5px; background-color: #f1f1f1; justify-content: center;}
+</style>
+<body>
+
+
+<img src="img/xxx.gif" width="100" height="333">
+
+<p style= "background-color: black; color: white; text-align: center;"> save 50% for 12 months <br> - limited time offer. <br> Get started today.</p>
+https://www.xm.com/
+<?php
+// define variables and set to empty values
+$fnameErr $lnameErr $emailErr $passwordErr $pinErr $genderErr = "";
+
+if (***server***)
+{if (empty($_post["name"])) { $nameErr = "First Name is required";} else {
+$fname = test_input($_post["fname"]);}
+if (empty($_post["name"])) { $nameErr = "Last Name is required";} else {
+$lname = test_input($_post["lname"]);}
+if (empty($_post["email"])) { $nameErr = "Email is required";} else {
+$email = test_input($_post["email"]);}
+if (empty($_post["Password"])) { $nameErr = "Password is required";} else {
+$password = test_input($_post["password"]);}
+if (empty($_post["pin"])) { $nameErr = "Pin is required";} else {
+$pin = test_input($_post["pin"]);}
+if (empty($_post["gender"])) { $nameErr = "Gender is required";} else {
+$gender = test_input($_post["gender"]);}
+
+function test_input ($data) {
+$data = trim ($data)
+$data = stripslashes ($data)
+$data = htmlspecialchar ($data); return $data}
+
+?>
+<div class="wrapper">
+<h1 text-align: center> Create an Account </h1>
+<form method= "post" action= >
+First Name: <br> <input type= "text" placeholder= "First Name" name="fname">
+<br> <br>
+Last Name: <br> <input type= "text" placeholder= "Last Name" name="lname">
+<br> <br>
+Email: <br> <input type= "text" placeholder= "Email" name="email">
+<br> <br>
+Password: <br> <input type= "password" placeholder= "Password" last name="password">
+<br> <br>
+Pin: <br> <input type= "password" placeholder= "Pin" last name="pin">
+<br> <br>
+Gender: 
+<input type= "radio" last name="gender" value= "male"> Male
+<input type= "radio" last name="gender" value= "female"> Female
+<input type= "radio" last name="gender" value= "Other"> Other
+<br> <br>
+<input type="submit" name="submit" value= "sign up">
+</form>
+</div>
+</body>
+</html>
